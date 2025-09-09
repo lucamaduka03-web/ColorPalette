@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Palette Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Colour Palette Generator</h1>
+
+      <div class="controls-container">
+        <button id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        <button id="new-btn">
+          <i class="fas fa-sync-alt"></i>
+          New Palette
+        </button>
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search colors..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-container">
+        
+        <div class="colour-box">
+          <div class="colour" style="background-color: lightslategrey"></div>
+          <div class="colour-info">
+            <span class="hex-value">#778899</span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+
+        <div class="colour-box">
+          <div class="colour" style="background-color: lightskyblue"></div>
+          <div class="colour-info">
+            <span class="hex-value">#87CEFA</span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+
+        <div class="colour-box">
+          <div class="colour" style="background-color: lightsteelblue"></div>
+          <div class="colour-info">
+            <span class="hex-value">#B0C4DE</span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+
+        <div class="colour-box">
+          <div class="colour" style="background-color: lightcoral"></div>
+          <div class="colour-info">
+            <span class="hex-value">#F08080</span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+
+        <div class="colour-box">
+          <div class="colour" style="background-color: lightcyan"></div>
+          <div class="colour-info">
+            <span class="hex-value">#E0FFFF</span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-container" style="display: none">
+        
+        <h2>Search Results</h2>
+
+        <div id="found-color-box" class="colour-box">
+          <div class="colour"></div>
+          <div class="colour-info">
+            <span class="hex-value"></span>
+            <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+          </div>
+        </div>
+        <div class="recommendations">
+          <h3>Similar Colors</h3>
+          <div id="similar-colors-container" class="palette-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
